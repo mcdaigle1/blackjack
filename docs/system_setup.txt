@@ -1,0 +1,31 @@
+
+
+
+Install homebrew
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+Install Java:
+	brew install java
+
+brew install wget
+
+brew install curl
+
+Install Docker Desktop: https://docs.docker.com/desktop/install/mac-install/
+
+Install AWS
+    curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
+    sudo installer -pkg AWSCLIV2.pkg -target /
+
+Terraform setup
+    brew tap hashicorp/tap
+    brew update
+    brew install hashicorp/tap/terraform
+
+    after creating main.tf
+        terraform init
+
+    create terraform IAM user in AWS
+
+    mkdir ~/.aws
+

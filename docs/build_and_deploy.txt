@@ -1,0 +1,9 @@
+
+mvn clean package
+
+aws ecr get-login-password --region us-west-1 | sudo docker login --username AWS --password-stdin 450287579526.dkr.ecr.us-west-1.amazonaws.com
+sudo docker build -t latest
+sudo docker tag kube_demo:latest 450287579526.dkr.ecr.us-west-1.amazonaws.com/kube-test-ecr:$date
+sudo docker push kube_demo:latest 450287579526.dkr.ecr.us-west-1.amazonaws.com/kube-test-ecr:$date
+sudo docker tag kube_demo:latest 450287579526.dkr.ecr.us-west-1.amazonaws.com/kube-test-ecr:$latest
+sudo docker push kube_demo:latest 450287579526.dkr.ecr.us-west-1.amazonaws.com/kube-test-ecr:$latest
